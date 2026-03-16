@@ -36,12 +36,12 @@ if not st.session_state["login"]:
 # -----------------------------
 # LOAD DATA AND MODEL
 # -----------------------------
-df=pd.read_excel("Book1.xlsx")
-lr = pd.read_csv("heart.csv")
+df=pd.read_excel("Heart/Book1.xlsx")
+lr = pd.read_csv("Heart/heart.csv")
 X = lr.drop("target", axis=1)
 
-model = joblib.load("linear.pkl")
-scaler = joblib.load("scale3.pkl")
+model = joblib.load("Heart/linear.pkl")
+scaler = joblib.load("Heart/scale3.pkl")
 
 # -----------------------------
 # APP HEADER
